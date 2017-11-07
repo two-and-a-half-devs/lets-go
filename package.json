@@ -1,0 +1,23 @@
+{
+  "name": "lets-go",
+  "version": "0.0.1",
+  "description": "App that brings you new adventures",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobaperez/lets-go.git"
+  },
+  "author": "Jake, Adrian, Brendan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jacobaperez/lets-go/issues"
+  },
+  "homepage": "https://github.com/jacobaperez/lets-go#readme",
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
+}
