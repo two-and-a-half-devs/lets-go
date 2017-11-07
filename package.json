@@ -4,20 +4,33 @@
   "description": "App that brings you new adventures",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack -w --config webpack.config.js",
+    "start": "nodemon server/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jacobaperez/lets-go.git"
+    "url": "git+https://github.com/two-and-a-half-devs/lets-go.git"
   },
   "author": "Jake, Adrian, Brendan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jacobaperez/lets-go/issues"
+    "url": "https://github.com/two-and-a-half-devs/lets-go/issues"
   },
-  "homepage": "https://github.com/jacobaperez/lets-go#readme",
+  "homepage": "https://github.com/two-and-a-half-devs/lets-go#readme",
   "dependencies": {
+    "axios": "^0.17.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "nodemon": "^1.11.0",
+    "webpack": "^2.4.1"
   }
 }
