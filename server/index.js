@@ -1,8 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const path = require('path');
+const axios = require('axios');
+const db = require('./database/index.js');
 
+/* ------------------ SERVER  ------------------ */
 let app = express();
-
 app.use(express.static(__dirname + '/../client/dist'));
 app.use(bodyParser());
 app.use(function(req, res, next) {
@@ -11,6 +15,7 @@ app.use(function(req, res, next) {
   next();
 });
 
+/* ------------------ ROUTE HANDLING  ------------------ */
 app.post('/', (req, res) => {
 
 });
