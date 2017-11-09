@@ -1,9 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
+const db = require('./database/controllers/controller');
+
+// not sure we need these.
 const path = require('path');
 const axios = require('axios');
-const db = require('./database/index.js');
+
 
 /* ------------------ SERVER  ------------------ */
 let app = express();
