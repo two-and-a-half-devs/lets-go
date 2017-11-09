@@ -1,11 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import AdventureList from './AdventureList.jsx';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      activity: [],
+      adventure: '',
     }
 
   }
@@ -14,6 +15,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>LETS GO!!</h1>
+        <AdventureList adventure={this.state.adventure} />
       </div>
     )
   }
