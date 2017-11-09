@@ -1,9 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const axios = require('axios');
 const db = require('./database/index.js');
 const request = require('request');
+const api = require('./apikeys.js');
 
 /* ------------------ SERVER  ------------------ */
 let app = express();
@@ -17,15 +17,35 @@ app.use(function(req, res, next) {
 
 /* ------------------ ROUTE HANDLING  ------------------ */
 app.post('/food', (req, res) => {
-
+  const zip = req.body.zipcode;
+  const options = {
+    url: `https://api.yelp.com/v3/businesses/search?term=food&location=${zip}&limit=50&open_now=true`,
+    authorization: `bearer ${api.yelp}`
+  };
+  request(options, (error, response, body) => {
+    if (err) throw err;
+    res.send(body);
+  });
 });
 
 app.post('/active', (req, res) => {
-
+  const zip = req.body.zipcode;
+  const options = {
+    url: `https://api.yelp.com/v3/businesses/search?term=food&location=${zip}&limit=50&open_now=true`,
+    authorization: `bearer ${api.yelp}`
+  };
+  request(options, (error, response, body) => {
+    if (err) throw err;
+    res.send(body);
+  });
 });
 
 app.post('/movies', (req, res) => {
-
+ const zip = req.body.zipcode;
+ let city;
+ request(`http://maps.googleapis.com/maps/api/geocode/json?address=${zip}&sensor=true`, (error, response, body) => {
+   body.results[0]
+ });
 });
 
 app.post('/entertainment', (req, res) => {
