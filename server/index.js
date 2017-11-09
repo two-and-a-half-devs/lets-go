@@ -1,11 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const db = require('./database/controllers/controller');
-
-// not sure we need these.
+const mongoose = require('mongoose');
 const path = require('path');
 const axios = require('axios');
-
+const db = require('./database/index.js');
+const request = require('request');
 
 /* ------------------ SERVER  ------------------ */
 let app = express();
@@ -18,7 +17,23 @@ app.use(function(req, res, next) {
 });
 
 /* ------------------ ROUTE HANDLING  ------------------ */
-app.post('/', (req, res) => {
+app.post('/food', (req, res) => {
+
+});
+
+app.post('/active', (req, res) => {
+
+});
+
+app.post('/movies', (req, res) => {
+
+});
+
+app.post('/entertainment', (req, res) => {
+
+});
+
+app.post('/random', (req, res) => {
 
 });
 
