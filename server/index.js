@@ -20,6 +20,7 @@ app.post('/food', (req, res) => {
   const zip = req.body.zipcode;
 
   const options = {
+<<<<<<< HEAD
     url: `https://api.yelp.com/v3/businesses/search?term=food&location=${zip}&limit=50&open_now=true`,
     headers: {
       authorization: `bearer ${api.yelp}`
@@ -27,6 +28,14 @@ app.post('/food', (req, res) => {
   };
 
   request(options, (error, response, body) => {
+=======
+    headers: {
+      authorization: `bearer ${api.yelp}`
+    },
+    url: `https://api.yelp.com/v3/businesses/search?term=food&location=${zip}&limit=50&open_now=true`
+  };
+  request(options, (err, response, body) => {
+>>>>>>> [ops]
     if (err) throw err;
     res.send(body);
   });
@@ -42,8 +51,12 @@ app.post('/active', (req, res) => {
       authorization: `bearer ${api.yelp}`
     }
   };
+<<<<<<< HEAD
 
   request(options, (error, response, body) => {
+=======
+  request(options, (err, response, body) => {
+>>>>>>> [ops]
     if (err) throw err;
     res.send(body);
   });
@@ -51,6 +64,7 @@ app.post('/active', (req, res) => {
 });
 
 app.post('/movies', (req, res) => {
+<<<<<<< HEAD
   const zip = req.body.zipcode;
   let city;
   let cityid;
@@ -86,6 +100,13 @@ app.post('/movies', (req, res) => {
 
   res.send(result);
 
+=======
+ const zip = req.body.zipcode;
+ let city;
+ request(`http://maps.googleapis.com/maps/api/geocode/json?address=${zip}&sensor=true`, (err, response, body) => {
+   body.results[0]
+ });
+>>>>>>> [ops]
 });
 
 app.post('/entertainment', (req, res) => {
