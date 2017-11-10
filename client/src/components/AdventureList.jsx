@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 import Adventure from './Adventure.jsx';
 
 function AdventureList(props) {
@@ -7,7 +8,8 @@ function AdventureList(props) {
     <div>
       <div id="adventure-list" >
         <div id="left" >
-          <Adventure adventure={props.adventure}/>
+          <Adventure adventure={props.adventure} />
+          <img src="https://capstoneclimbing.com/wp-content/uploads/2014/09/adventure.png" />
         </div>
         <div id="left-middle" >
           <Adventure adventure={props.adventure}/>

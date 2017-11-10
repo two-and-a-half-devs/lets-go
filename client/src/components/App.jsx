@@ -14,7 +14,7 @@ class App extends React.Component {
   render () {
     return (
       <div>
-        <h1>LETS GO!!</h1>
+        <h1 id="title">TITLE</h1>
         <AdventureList adventure={this.state.adventure} />
       </div>
     )
