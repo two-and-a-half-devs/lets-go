@@ -1,13 +1,13 @@
 const sequelize = require('../index');
 const models = require('../models/models');
+const cryptoRandomString = require('crypto-random-string');
 
-const addUser = function(userName, psw, emailAddress, uniqueTag, res = null) {
+const addUser = function(userName, emailAddress, res = null) {
+  let uniqueTag = cryptoRandomString(5);
   sequelize.models.users.create({
     username: userName,
-    password: psw,
     email: emailAddress,
     unique_identifier: uniqueTag
-
   })
   .then(() => {
     if (res) res.status(200);
@@ -30,10 +30,11 @@ const getUsers = function(res = null) {
   })
 }
 
-const addAdventure = function(adventureName, uniqueTag, res = null) {
+const addAdventure = function(adventureName, uniqueTag, username, res = null) {
   sequelize.models.adventures.create({
     adventure: adventureName,
-    unique_identifier: uniqueTag
+    unique_identifier: uniqueTag,
+    username: username
   })
   .then(() => {
     if (res) res.status(200);
@@ -42,9 +43,9 @@ const addAdventure = function(adventureName, uniqueTag, res = null) {
   .catch(err => console.log("Error inputing adventure into database:", err))
 }
 
-const getAdventuresFromUser = function(uniqueTag, res = null) {
+const getAdventuresFromUser = function(userName, res = null) {
   sequelize.models.adventures.findAll({
-    where: { unique_identifier: uniqueTag }
+    where: { username: userName }
   })
   .then(results => {
     if (res) res.status(200).json(results)
