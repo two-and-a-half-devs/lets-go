@@ -7,7 +7,7 @@ const Users = sequelize.define('users', {
       type: Sequelize.STRING,
       allowNull: false,
       unique: true
-    }
+    },
     email: {
       type: Sequelize.STRING,
       allowNull: false,
@@ -18,11 +18,7 @@ const Users = sequelize.define('users', {
       allowNull: false,
       unique: true
     }
-  },
-  {
-    timestamps: false
-  }
-)
+})
 
 /* ---------------- ADVENTURE TABLE ------------------ */
 const Adventures = sequelize.define('adventures', {
@@ -38,7 +34,6 @@ const Adventures = sequelize.define('adventures', {
       type: Sequelize.STRING,
       allowNull: false,
     }
-  }, {
-    timestamps: false
-  }
-)
+})
+
+sequelize.sync();

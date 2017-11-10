@@ -57,7 +57,7 @@ const getAdventuresFromUser = function(userName, res = null) {
   })
 }
 
-
+exports.sequelize = sequelize;
 exports.addUser = addUser;
 exports.getUsers = getUsers;
 exports.addAdventure = addAdventure;
