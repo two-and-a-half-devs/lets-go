@@ -60,5 +60,5 @@ typings/
 # Postgres info
 db.config.js
 
-#API keys
+# API keys
 apikeys.js
