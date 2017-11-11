@@ -42,7 +42,7 @@ class Adventure extends React.Component {
   render() {
     return (
       <div className="adventure-container" onClick={this.handleClick}>
-        <h4>Test</h4>
+        <h4>RANDOM</h4>
         <h3>{this.state.name}</h3>
         <h6>{this.state.address0}</h6>
         <h6>{this.state.address1}</h6>
