@@ -1,8 +1,7 @@
 const bodyParser = require('body-parser');
 const request = require('request');
-const rp = require('request-promises');
+const rp = require('request-promise');
 const api = require('../../apikeys.js');
-app.use(bodyParser());
 
 module.exports = {
   food: (req, res) => {
@@ -26,7 +25,7 @@ module.exports = {
     const zip = req.body.zipcode;
 
     const options = {
-      url: `https://api.yelp.com/v3/businesses/search?term=hiking&location=${zip}&limit=50&open_now=true`,
+      url: `https://api.yelp.com/v3/businesses/search?term=hiking&location=${zip}&open_now=true`,
       headers: {
         authorization: api.yelp
       }
@@ -96,10 +95,24 @@ module.exports = {
       }
     };
 
-    request(options, (error, response, body) => {
+    request(options, (err, response, body) => {
       if (err) throw err;
       res.send(body);
     });
-  });
+  },
+
+  random: (req, res) => {
+    const randomNum = Math.floor(Math.random() * 4);
+    if (randomNum === 0) {
+      return this.food;
+    } else if (randomNum === 1) {
+      return this.active
+    } else if (randomNum === 2) {
+      return this.active
+    } else if (randomNum === 3) {
+      return this.active
+    }
+  }
+
 
 }
