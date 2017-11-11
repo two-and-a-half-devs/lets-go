@@ -17,14 +17,15 @@ class AdvFood extends React.Component {
   }
 
   handleClick() {
+    console.log('Zip code entered: ', this.props.zip_code)
     const context = this;
     axios({
       method: 'post',
       url: '/food',
       data: {
-        zipcode: 90045  // NEED TO CHANGE TO GRAB INPUT
+        zipcode: this.props.zip_code
       }
-    }).then(function(res) {
+    }).then((res) =>  {
       const item = res.data.businesses[Math.floor(Math.random()*res.data.businesses.length)];
       context.setState({
         name: item.name,
@@ -32,7 +33,6 @@ class AdvFood extends React.Component {
         address1: `${item.location.display_address[1]}`,
         image_url: item.image_url
       });
-      console.log(item)
     });
   }
 

@@ -20,21 +20,16 @@ class AdvEntertainment extends React.Component {
       method: 'post',
       url: '/entertainment',
       data: {
-        zipcode: 90045 // NEED TO CHANGE
+        zipcode: this.props.zip_code
       }
-    }).then(function(res) {
+    }).then((res) =>  {
       const item = res.data.events[Math.floor(Math.random()*res.data.events.length)];
-      console.log(item.logo.original.url)
       context.setState({
         name: item.name.text,
         item_url: item.url,
         image_url: item.logo.original.url
 
       });
-      console.log('HELLO')
-      //item.logo.original.url, item.name.text,
-      //item.url, item.start.local
-      //convert start.local to readible thing
     });
 
   }

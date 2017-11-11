@@ -20,16 +20,15 @@ class AdvMovies extends React.Component {
       method: 'post',
       url: '/movies',
       data: {
-        zipcode: 90045 // NEED TO CHANGE TO GRAB INPUT
+        zipcode: this.props.zip_code
       }
-    }).then(function(res) {
+    }).then((res) => {
       const item = res.data;
       context.setState({
         movieName: item.movieName,
         moviePoster: item.moviePoster,
         cinemaName: item.cinemaName
       });
-      console.log(item)
     });
   }
 

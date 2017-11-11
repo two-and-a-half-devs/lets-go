@@ -58,7 +58,6 @@ module.exports = {
       }))
       .then(() => {
         rp({ url: `https://api.internationalshowtimes.com/v4/showtimes?city_ids=${cityid}`, headers: { authorization: api.movies }}).then((body => {
-          console.log('CITY ID', cityid)
           const movieBody = JSON.parse(body);
           const movie = movieBody.showtimes[Math.floor(Math.random() * (20) + 1)];
           movieid = movie.movie_id;
@@ -75,8 +74,6 @@ module.exports = {
             rp({ url: `https://api.internationalshowtimes.com/v4/cinemas/${cinemaid}`, headers: { authorization: api.movies }}).then((body => {
               const cinemaBody = JSON.parse(body);
               result.cinemaName = cinemaBody.cinema.name;
-              console.log(result.cinemaName)
-              console.log(result);
               res.send(result);
             }))
           })

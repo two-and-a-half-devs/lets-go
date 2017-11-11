@@ -7,34 +7,59 @@ import AdvEntertainment from './AdvEntertainment/AdvEntertainment.jsx';
 import AdvActive from './AdvActive/AdvActive.jsx';
 import AdvRandom from './AdvRandom/AdvRandom.jsx';
 
+class AdventureList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      zip_code: ''
+    }
+    this.handleZipCodeChange = this.handleZipCodeChange.bind(this);
+  }
 
-function AdventureList(props) {
-  return (
-    <div>
+  handleZipCodeChange(e) {
+    const value = e.target.value;
+    const name = e.target.name;
+    this.setState({[name]: value});
+  }
+
+  render() {
+    return (<div>
       <div className="row justify-content-center">
         <div className="col-sm-2 col-sm-offset-5">
-          <input className="form-control justify-content-center" type="text" placeholder="Zip Code"></input>
+        <p className="justify-content-center">Enter your zip code and select the type of adventure!</p>
+        <form>
+          <input
+          className="form-control justify-content-center"
+          name="zip_code"
+          type="text"
+          value={this.state.zip_code}
+          placeholder="Zip Code"
+          maxLength="5"
+          pattern="[0-9]{5}"
+          onChange={this.handleZipCodeChange} />
+          <input type="submit" />
+          </form>
         </div>
       </div>
       <div className="row justify-content-center">
         <div className="col-sm-2 col-sm-offset-1">
-          <AdvFood adventure={props.adventure} />
+          <AdvFood zip_code={this.state.zip_code}/>
         </div>
         <div className="col-sm-2">
-          <AdvMovies adventure={props.adventure} />
+          <AdvMovies zip_code={this.state.zip_code}/>
         </div>
         <div className="col-sm-2">
-          <AdvEntertainment adventure={props.adventure} />
+          <AdvEntertainment zip_code={this.state.zip_code}/>
         </div>
         <div className="col-sm-2">
-          <AdvActive adventure={props.adventure} />
+          <AdvActive zip_code={this.state.zip_code}/>
         </div>
         <div className="col-sm-2">
-          <AdvRandom adventure={props.adventure} />
+          <AdvRandom zip_code={this.state.zip_code}/>
         </div>
       </div>
-  </div>
-  );
+    </div>);
+  }
 }
 
 export default AdventureList;

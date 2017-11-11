@@ -9,7 +9,8 @@ const router = require('./router/routes.js')
 /* ------------------ SERVER  ------------------ */
 let app = express();
 app.use(express.static(__dirname + '/../client/dist'));
-app.use(bodyParser());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true}));
 app.use('/', router)
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
