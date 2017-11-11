@@ -2,3 +2,23 @@ body {
   text-align: center;
   background: #FFFFFF;
 }
+
+.jumbotron{
+    color:white;
+    background-color: rgba(101, 100, 149, 0.38);
+}
+
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.nav-tabs {
+    margin-bottom: 0;
+}
+
+.motto p {
+  color: rgb(77, 66, 114);
+  font-size: 20px;
+}

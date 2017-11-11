@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Adventure from './Adventure.jsx';
-import AdvFood from './AdvFood.jsx';
+import AdvFood from './AdvFood/AdvFood.jsx';
 import AdvMovies from './AdvMovies.jsx';
 import AdvEntertainment from './AdvEntertainment.jsx';
 import AdvActive from './AdvActive.jsx';
@@ -27,6 +27,10 @@ function AdventureList(props) {
         <div id="right" >
           <Adventure adventure={props.adventure}/>
         </div>
+      </div>
+      <div>
+        <input type="text" placeholder="Zip Code"></input>
+        <button type="button">Let's Go</button>
       </div>
   </div>
   );

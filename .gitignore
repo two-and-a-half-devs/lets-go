@@ -62,3 +62,6 @@ db.config.js
 
 # API keys
 apikeys.js
+
+# Bundle file
+bundle.js
