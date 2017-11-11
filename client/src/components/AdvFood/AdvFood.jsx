@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import foodImg from './food.png';
 
 
 class AdvFood extends React.Component {
@@ -39,6 +40,7 @@ class AdvFood extends React.Component {
     return (
       <div className="adventure-container" onClick={this.handleClick}>
         <h4>Food</h4>
+        <img src={foodImg} alt="fuck" />
         <h3>{this.state.name}</h3>
         <h6>{this.state.address0}</h6>
         <h6>{this.state.address1}</h6>

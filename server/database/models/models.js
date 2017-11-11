@@ -20,6 +20,7 @@ const Users = sequelize.define('users', {
     }
 })
 
+
 /* ---------------- ADVENTURE TABLE ------------------ */
 const Adventures = sequelize.define('adventures', {
     adventure: {
