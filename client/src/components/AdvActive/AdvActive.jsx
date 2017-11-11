@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import activeimg from './hiking.png';
 
 
-class Adventure extends React.Component {
+class AdvActive extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,9 +20,9 @@ class Adventure extends React.Component {
     const context = this;
     axios({
       method: 'post',
-      url: '/food',
+      url: '/active',
       data: {
-        zipcode:90045
+        zipcode: 90045 // NEED TO CHANGE
       }
     }).then(function(res) {
       const item = res.data.businesses[Math.floor(Math.random()*res.data.businesses.length)];
@@ -32,17 +33,15 @@ class Adventure extends React.Component {
         image_url: item.image_url
       });
       console.log(item)
-      //RES SENDING BACK THIS INFO
-      //item.name, item.url, item.image_url,
-      //item.address1, item.city, item.state,
-      //item.zip_code
     });
+
   }
 
   render() {
     return (
       <div className="adventure-container" onClick={this.handleClick}>
-        <h4>RANDOM</h4>
+        <h4>Active</h4>
+        <img src={activeimg} alt="No active image :./" />
         <h3>{this.state.name}</h3>
         <h6>{this.state.address0}</h6>
         <h6>{this.state.address1}</h6>
@@ -54,4 +53,4 @@ class Adventure extends React.Component {
 
 
 
-export default Adventure;
+export default AdvActive;

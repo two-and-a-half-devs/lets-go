@@ -1,36 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import Adventure from './Adventure.jsx';
 import AdvFood from './AdvFood/AdvFood.jsx';
-import AdvMovies from './AdvMovies.jsx';
-import AdvEntertainment from './AdvEntertainment.jsx';
-import AdvActive from './AdvActive.jsx';
+import AdvMovies from './AdvMovies/AdvMovies.jsx';
+import AdvEntertainment from './AdvEntertainment/AdvEntertainment.jsx';
+import AdvActive from './AdvActive/AdvActive.jsx';
+import AdvRandom from './AdvRandom/AdvRandom.jsx';
 
 
 function AdventureList(props) {
   return (
     <div>
-      <div id="adventure-list" >
-        <div id="left" >
-          <AdvFood adventure={props.adventure} />
-        </div>
-        <div id="left-middle" >
-          <AdvMovies adventure={props.adventure}/>
-        </div>
-        <div id="middle" >
-          <AdvEntertainment adventure={props.adventure}/>
-        </div>
-        <div id="right-middle" >
-          <AdvActive adventure={props.adventure}/>
-        </div>
-        <div id="right" >
-          <Adventure adventure={props.adventure}/>
+      <div className="row justify-content-center">
+        <div className="col-sm-2 col-sm-offset-5">
+          <input className="form-control justify-content-center" type="text" placeholder="Zip Code"></input>
         </div>
       </div>
-      <div>
-        <input type="text" placeholder="Zip Code"></input>
-        <button type="button">Let's Go</button>
+      <div className="row justify-content-center">
+        <div className="col-sm-2 col-sm-offset-1">
+          <AdvFood adventure={props.adventure} />
+        </div>
+        <div className="col-sm-2">
+          <AdvMovies adventure={props.adventure} />
+        </div>
+        <div className="col-sm-2">
+          <AdvEntertainment adventure={props.adventure} />
+        </div>
+        <div className="col-sm-2">
+          <AdvActive adventure={props.adventure} />
+        </div>
+        <div className="col-sm-2">
+          <AdvRandom adventure={props.adventure} />
+        </div>
       </div>
   </div>
   );
