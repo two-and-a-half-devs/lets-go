@@ -26,9 +26,9 @@ class AdventureList extends React.Component {
     return (<div>
       <div className="row justify-content-center">
         <div className="col-sm-2 col-sm-offset-5">
-        <p className="justify-content-center">Enter your zip code and select the type of adventure!</p>
         <form>
           <input
+          id="zipcode"
           className="form-control justify-content-center"
           name="zip_code"
           type="text"
@@ -37,8 +37,8 @@ class AdventureList extends React.Component {
           maxLength="5"
           pattern="[0-9]{5}"
           onChange={this.handleZipCodeChange} />
-          <input type="submit" />
           </form>
+          <br></br>
         </div>
       </div>
       <div className="row justify-content-center">
