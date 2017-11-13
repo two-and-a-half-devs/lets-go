@@ -22,9 +22,9 @@ class AdvActive extends React.Component {
       method: 'post',
       url: '/active',
       data: {
-        zipcode: 90045 // NEED TO CHANGE
+        zipcode: this.props.zip_code
       }
-    }).then(function(res) {
+    }).then((res) =>  {
       const item = res.data.businesses[Math.floor(Math.random()*res.data.businesses.length)];
       context.setState({
         name: item.name,
@@ -32,7 +32,6 @@ class AdvActive extends React.Component {
         address1: `${item.location.display_address[1]}`,
         image_url: item.image_url
       });
-      console.log(item)
     });
 
   }
