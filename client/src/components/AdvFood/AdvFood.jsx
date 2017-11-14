@@ -57,7 +57,7 @@ class AdvFood extends React.Component {
         $('#event').html('').append(`
           <div class="row justify-content-center">
             <div class="col-lg-4 col-lg-offset-2">
-              <img class='images' src=${this.state.image_url} alt=${this.state.name} />
+              <a href="#"><img class='images' src=${this.state.image_url} alt=${this.state.name} /></a>
             </div>
             <div class="col-lg-5">
               <br><br>
@@ -75,7 +75,7 @@ class AdvFood extends React.Component {
     return (
       <div className="adventure-container" onClick={this.handleClick}>
         <h4>Food</h4>
-        <img src={foodImg} alt="No food :(" />
+        <img src={foodImg} alt="No food :("/>
       </div>
     );
   }
