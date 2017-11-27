@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import activeimg from './hiking.png';
+import activeimg from './hiking.svg';
 import brendan from './brendan.gif'
 import $ from 'jquery'
 
@@ -76,7 +76,7 @@ class AdvActive extends React.Component {
     return (
       <div className="adventure-container" onClick={this.handleClick}>
         <h4>Active</h4>
-        <img src={activeimg} alt="No active image :./" />
+        <img class='logos' src={activeimg} alt="No active image :./" />
       </div>
     );
   }

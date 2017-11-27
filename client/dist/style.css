@@ -30,9 +30,13 @@ body {
 .images {
   height: auto;
   width: auto;
-  max-height: 400px;
+  max-height: 300px;
   max-width: 400px;
   border-radius: 5000px;
+}
+
+.logos {
+  height: 120px;
 }
 
 #zipcode {
