@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import foodImg from './food.png';
+import foodImg from './food.svg';
 import brendan from './brendan.gif'
 import $ from 'jquery'
 
@@ -75,7 +75,7 @@ class AdvFood extends React.Component {
     return (
       <div className="adventure-container" onClick={this.handleClick}>
         <h4>Food</h4>
-        <img src={foodImg} alt="No food :("/>
+        <img class='logos' src={foodImg} alt="No food :("/>
       </div>
     );
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import random from './help-round-button.png';
+import random from './help-round-button.svg';
 import brendan from './brendan.gif'
 import $ from 'jquery'
 
@@ -76,7 +76,7 @@ class AdvFood extends React.Component {
     return (
       <div className="adventure-container" onClick={this.handleClick}>
         <h4>Random</h4>
-        <img src={random} alt="No random for you" />
+        <img class='logos' src={random} alt="No random for you" />
       </div>
     );
   }

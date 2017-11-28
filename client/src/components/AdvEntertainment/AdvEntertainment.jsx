@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import entertainmentimg from './ferris-wheel.png';
+import entertainmentimg from './ferris-wheel.svg';
 import brendan from './brendan.gif'
 import $ from 'jquery'
 
@@ -73,7 +73,7 @@ class AdvEntertainment extends React.Component {
     return (
       <div className="adventure-container" onClick={this.handleClick}>
         <h4>Entertainment</h4>
-        <img src={entertainmentimg} alt="no entertainment for you" />
+        <img class="logos" src={entertainmentimg} alt="no entertainment for you" />
       </div>
     );
   }
