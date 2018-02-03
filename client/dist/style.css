@@ -2,12 +2,16 @@ body {
   font-family: 'Raleway', sans-serif;
   text-align: center;
   background: #FFFFFF;
-  height: 1000px;
+  /* height: 1000px; */
+}
+
+.title {
+  padding-top: 10px;
 }
 
 .jumbotron{
-    padding-top:20px;
-    padding-bottom: 10px;
+    padding-top: 11px;
+    padding-bottom: 1px;
     color:white;
     background-color: rgba(101, 100, 149, 0.38);
 }
@@ -36,10 +40,11 @@ body {
 }
 
 .logos {
-  height: 120px;
+  height: 90px;
 }
 
 #zipcode {
+  margin-top: -10px;
   text-align: center;
 }
 
@@ -54,18 +59,4 @@ body {
 
 .adventure-container{
   cursor: pointer;
-}
-
-.footer {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1px;
-  background-color: #efefef;
-  text-align: center;
-}
-
-#footer {
-  padding-top: 15px;
 }

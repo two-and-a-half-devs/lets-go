@@ -13030,7 +13030,7 @@ var AdvActive = function (_React$Component) {
       if (this.props.zip_code === '' || isNaN(this.props.zip_code) || this.props.zip_code.length !== 5) {
         (0, _jquery2.default)('#zipcodeAlert').html('').append('\n        <div class="alert alert-danger alert-dismissible fade show" role="alert">\n          <button type="button" class="close" data-dismiss="alert" aria-label="Close">\n            <span aria-hidden="true">&times;</span>\n          </button>\n          <strong>ZOINKS!</strong> Looks like there was something wrong with the zip code. Please double check and try again.\n        </div>\n      ');
       } else {
-        (0, _jquery2.default)('#event').html('').append('\n        <div class="row justify-content-center">\n          <div class="col-lg-4">\n            <img id=\'brendan\' src=' + _brendan2.default + ' />\n            <br><br><br>\n            <h3>Don\'t worry!</h3>\n            <h3><strong>Brendan</strong> is searching for you!</h3>\n          </div>\n          </div>\n          ');
+        (0, _jquery2.default)('#event').html('').append('\n        <div class="row justify-content-center">\n          <div class="col-lg-4">\n            <img id=\'brendan\' src=' + _brendan2.default + ' />\n            <br><br>\n            <h3>Don\'t worry! <strong>Brendan</strong> is searching for you!</h3>\n          </div>\n          </div>\n          ');
         var context = this;
         (0, _axios2.default)({
           method: 'post',
@@ -13141,7 +13141,7 @@ var AdvEntertainment = function (_React$Component) {
       if (this.props.zip_code === '' || isNaN(this.props.zip_code) || this.props.zip_code.length !== 5) {
         (0, _jquery2.default)('#zipcodeAlert').html('').append('\n        <div class="alert alert-danger alert-dismissible fade show" role="alert">\n          <button type="button" class="close" data-dismiss="alert" aria-label="Close">\n            <span aria-hidden="true">&times;</span>\n          </button>\n          <strong>ZOINKS!</strong> Looks like there was something wrong with the zip code. Please double check and try again.\n        </div>\n      ');
       } else {
-        (0, _jquery2.default)('#event').html('').append('\n        <div class="row justify-content-center">\n          <div class="col-lg-4">\n            <img id=\'brendan\' src=' + _brendan2.default + ' />\n            <br><br><br>\n            <h3>Don\'t worry!</h3>\n            <h3><strong>Brendan</strong> is searching for you!</h3>\n          </div>\n          </div>\n          ');
+        (0, _jquery2.default)('#event').html('').append('\n        <div class="row justify-content-center">\n          <div class="col-lg-4">\n            <img id=\'brendan\' src=' + _brendan2.default + ' />\n            <br><br>\n            <h3>Don\'t worry! <strong>Brendan</strong> is searching for you!</h3>\n          </div>\n          </div>\n          ');
         var context = this;
         (0, _axios2.default)({
           method: 'post',
@@ -13253,7 +13253,7 @@ var AdvFood = function (_React$Component) {
       if (this.props.zip_code === '' || isNaN(this.props.zip_code) || this.props.zip_code.length !== 5) {
         (0, _jquery2.default)('#zipcodeAlert').html('').append('\n        <div class="alert alert-danger alert-dismissible fade show" role="alert">\n          <button type="button" class="close" data-dismiss="alert" aria-label="Close">\n            <span aria-hidden="true">&times;</span>\n          </button>\n          <strong>ZOINKS!</strong> Looks like there was something wrong with the zip code. Please double check and try again.\n        </div>\n      ');
       } else {
-        (0, _jquery2.default)('#event').html('').append('\n        <div class="row justify-content-center">\n          <div class="col-lg-4">\n            <img id=\'brendan\' src=' + _brendan2.default + ' />\n            <br><br><br>\n            <h3>Don\'t worry!</h3>\n            <h3><strong>Brendan</strong> is searching for you!</h3>\n          </div>\n          </div>\n          ');
+        (0, _jquery2.default)('#event').html('').append('\n        <div class="row justify-content-center">\n          <div class="col-lg-4">\n            <img id=\'brendan\' src=' + _brendan2.default + ' />\n            <br><br>\n            <h3>Don\'t worry! <strong>Brendan</strong> is searching for you!</h3>\n          </div>\n          </div>\n          ');
         var context = this;
         (0, _axios2.default)({
           method: 'post',
@@ -13364,7 +13364,7 @@ var AdvMovies = function (_React$Component) {
       if (this.props.zip_code === '' || isNaN(this.props.zip_code) || this.props.zip_code.length !== 5) {
         (0, _jquery2.default)('#zipcodeAlert').html('').append('\n        <div class="alert alert-danger alert-dismissible fade show" role="alert">\n          <button type="button" class="close" data-dismiss="alert" aria-label="Close">\n            <span aria-hidden="true">&times;</span>\n          </button>\n          <strong>ZOINKS!</strong> Looks like there was something wrong with the zip code. Please double check and try again.\n        </div>\n      ');
       } else {
-        (0, _jquery2.default)('#event').html('').append('\n        <div class="row justify-content-center">\n          <div class="col-lg-4">\n            <img id=\'brendan\' src=' + _brendan2.default + ' />\n            <br><br><br>\n            <h3>Don\'t worry!</h3>\n            <h3><strong>Brendan</strong> is searching for you!</h3>\n          </div>\n          </div>\n          ');
+        (0, _jquery2.default)('#event').html('').append('\n        <div class="row justify-content-center">\n          <div class="col-lg-4">\n            <img id=\'brendan\' src=' + _brendan2.default + ' />\n            <br><br>\n            <h3>Don\'t worry! <strong>Brendan</strong> is searching for you!</h3>\n          </div>\n          </div>\n          ');
         var context = this;
         (0, _axios2.default)({
           method: 'post',

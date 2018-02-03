@@ -14,8 +14,7 @@
   <body>
     <div class="container">
         <div class="page-header">
-          <br><br>
-          <h1>Let's Go</h1>
+          <h1 class="title">Let's Go</h1>
         </div>
       <div class="jumbotron">
         <div class="motto">
@@ -24,20 +23,25 @@
       </div>
     </div>
     <div class="container">
-      <div id="app">This will leave when app is rendered!</div>
+      <div id="app"></div>
       <br><br><br>
       <div id="zipcodeAlert">
       </div>
       <div id="event">
       </div>
     </div>
+    <script>
+    function reloadScrollBars() {
+    document.documentElement.style.overflow = 'auto';  // firefox, chrome
+    document.body.scroll = "yes"; // ie only
+    }
 
+    function unloadScrollBars() {
+    document.documentElement.style.overflow = 'hidden';  // firefox, chrome
+    document.body.scroll = "no"; // ie only
+    }
+    </script>
     <script type="text/javascript" src="./bundle.js"></script>
-    <footer class="footer">
-      <p id="footer">
-        Created by <a href="http://github.com/two-and-a-half-devs/lets-go" target="_blank">Two and a Half Devs</a>
-      </p>
-    </footer>
     <script src="animation.js"></script>
   </body>
 </html>

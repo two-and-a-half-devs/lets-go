@@ -31,9 +31,8 @@ class AdvMovies extends React.Component {
         <div class="row justify-content-center">
           <div class="col-lg-4">
             <img id='brendan' src=${brendan} />
-            <br><br><br>
-            <h3>Don't worry!</h3>
-            <h3><strong>Brendan</strong> is searching for you!</h3>
+            <br><br>
+            <h3>Don't worry! <strong>Brendan</strong> is searching for you!</h3>
           </div>
           </div>
           `)
