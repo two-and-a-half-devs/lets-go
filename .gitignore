@@ -56,12 +56,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
-# Postgres info
-db.config.js
-
-# API keys
-apikeys.js
-
-# Bundle file
-bundle.js
