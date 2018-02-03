@@ -17,7 +17,8 @@ app.use(function(req, res, next) {
   next();
 });
 
-const port = 3000;
-app.listen(port, function () {
-  console.log(`Server Starts on ${port}`);
+let port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+  console.log(`Port is ${port}`);
 });
