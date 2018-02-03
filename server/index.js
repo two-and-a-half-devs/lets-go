@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const db = require('./database/index.js');
 const request = require('request');
 const api = require('../apikeys.js');
 const router = require('./router/routes.js')

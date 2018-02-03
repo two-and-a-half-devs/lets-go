@@ -2,7 +2,7 @@ body {
   font-family: 'Raleway', sans-serif;
   text-align: center;
   background: #FFFFFF;
-  height: 1250px;
+  height: 1000px;
 }
 
 .jumbotron{
@@ -61,7 +61,11 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1rem;
+  padding: 1px;
   background-color: #efefef;
   text-align: center;
+}
+
+#footer {
+  padding-top: 15px;
 }
